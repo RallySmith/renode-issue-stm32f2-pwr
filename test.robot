@@ -21,6 +21,7 @@ Load Script
 Should Run Test Case
     Load Script
     Start Emulation
+    Wait For Line On Uart     INFO:<Testing PWR. Verify the values are correct.>
     Should Not Be In Log      pwr: Unhandled write to offset 0x0. Unhandled bits: [8] when writing value 0xFCD00. Tags: DBP (0x1).
     Should Not Be On Uart     FAIL:<BD_PROTECT(0):PWR_CR:DBP not updated> Line: 61, File: /home/jsmith/work/ecos/hg/ecospro/packages/hal/cortexm/stm32/stm32x0g_eval/current/tests/pwr.c
     Wait For Line On Uart     PASS:<STM32X0G-EVAL PWR test done>
