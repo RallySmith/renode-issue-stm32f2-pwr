@@ -1,0 +1,7 @@
+// STM32F21[57] only
+
+sysbus:
+    init:
+        ApplySVD @https://github.com/posborne/cmsis-svd/blob/master/data/STMicro/STM32F21x.svd
+        Tag <0x50060000, 0x500603FF> "CRYP"
+        Tag <0x50060400, 0x500607FF> "HASH"

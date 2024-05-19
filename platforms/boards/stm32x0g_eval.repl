@@ -1,0 +1,26 @@
+// STM32x0G-EVAL mainboard
+
+// TODO
+// DB9 CN16 : RX PC10 : TX PC11
+
+// TODO:
+// I2C1 64Kbit EEPROM
+// I2C1 LIS302DL MEMS
+
+// TODO
+// PF9 10Kohm potentiometer (RV9)
+
+// PA0  : (B2) wakeup button
+
+// PC13 : (B3) tamper detection button
+
+// PG15 : (B4) general purpose button
+button: Miscellaneous.Button @ gpioPortG 15
+    -> gpioPortG@15
+//    IRQ -> gpioPortG@15
+//    invert: true
+
+// 16Mbit SRAM IS61WV102416BLL-10MLI
+// Shares same I/O as CAN1 so JP3 and JP10 on real H/W must be open
+u6_sram: Memory.MappedMemory @ sysbus 0x64000000
+    size: 0x00200000
