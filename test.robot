@@ -14,6 +14,7 @@ ${UART}                       sysbus.uart4
 Load Script
     Execute Script            ${SCRIPT}
     Create Terminal Tester    ${UART}
+    Create Log Tester         1
 
 
 *** Test Cases ***
