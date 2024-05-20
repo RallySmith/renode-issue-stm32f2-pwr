@@ -24,7 +24,7 @@ namespace Antmicro.Renode.Peripherals.Miscellaneous
     [AllowedTranslations(AllowedTranslation.ByteToDoubleWord | AllowedTranslation.WordToDoubleWord)]
     public sealed class STM32_PWR_Fixed : BasicDoubleWordPeripheral, IKnownSize
     {
-        public STM32_PWR_Fixed(string stm32Family, Machine machine) : base(machine)
+        public STM32_PWR_Fixed(string stm32Family, IMachine machine) : base(machine)
         {
             if(null == stm32Family)
             {
