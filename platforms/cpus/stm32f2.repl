@@ -42,7 +42,8 @@ rom: Memory.MappedMemory @ sysbus 0x1FFF0000
 
 // STM32F21[57] have CRYP
 
-pwr: Miscellaneous.STM32_PWR @ sysbus 0x40007000
+pwr: Miscellaneous.STM32_PWR_Fixed @ sysbus 0x40007000
+    stm32Family: "F2"
 
 rcc: Miscellaneous.STM32F4_RCC @ sysbus 0x40023800
     rtcPeripheral: rtc

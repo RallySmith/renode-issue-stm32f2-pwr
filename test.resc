@@ -7,6 +7,8 @@ mach create $name
 
 path add $ORIGIN
 
+include @platforms/peripherals/STM32_PWR_Fixed.cs
+
 machine LoadPlatformDescription $ORIGIN/platforms/boards/stm3220g_eval.repl
 
 cpu PerformanceInMips 125
